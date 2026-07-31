@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lamine Yamal | Galeria Interativa</title>
+    <title>Lamine Yamal | História & Carreira</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,47 +11,106 @@
 
     <header>
         <div class="logo">LY<span>30</span></div>
-        <nav>
+        <nav class="nav-links">
+            <a href="#historia">História</a>
+            <a href="#carreira">Carreira</a>
             <a href="#galeria">Galeria</a>
-            <a href="#momentos">Momentos</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Lamine Yamal</h1>
-        <p>Clique nas categorias abaixo para filtrar as fotos do craque!</p>
+        <div class="hero-content">
+            <h1>Lamine Yamal</h1>
+            <p>Do bairro de Rocafonda para o topo do futebol mundial.</p>
+            <a href="#historia" class="btn">Conheça a História</a>
+        </div>
     </section>
 
-    <section id="galeria" class="container">
+    <section id="historia" class="section">
+        <h2>A Origem & História</h2>
+        <div class="bio-container">
+            <div class="bio-text">
+                <p>Nascido em 13 de julho de 2007 em Mataró, Espanha, <strong>Lamine Yamal Nasraoui Ebana</strong> é filho de pai marroquino e mãe guineense. Criado no bairro humilde de <em>Rocafonda</em> (cujo código postal <strong>304</strong> ele celebra até hoje em seus comemorações de gol), Lamine demonstrou um talento fora do comum desde muito novo.</p>
+                <p>Com apenas 7 anos, ingressou na famosa academia <strong>La Masia</strong>, do FC Barcelona, onde rapidamente escalou todas as categorias de base jogando contra atletas anos mais velhos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="carreira" class="section bg-dark">
+        <h2>Trajetória Profissional</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">Abril de 2023</span>
+                    <h3>Estreia Histórica pelo Barcelona</h3>
+                    <p>Com apenas 15 anos e 290 dias, tornou-se o jogador mais jovem a estrear pela equipe principal do FC Barcelona na era moderna da La Liga.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">Setembro de 2023</span>
+                    <h3>Estreia e Gol na Seleção Espanhola</h3>
+                    <p>Convocado para a Seleção Principal da Espanha com 16 anos e 57 dias, marcando gol logo em sua estreia contra a Geórgia.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">Julho de 2024</span>
+                    <h3>Campeão da Eurocopa 2024</h3>
+                    <p>Protagonista da campanha do título da Espanha, sendo eleito o **Melhor Jovem da Eurocopa** e autor de um gol antológico na semifinal contra a França.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="date">Temporada 2024/2025</span>
+                    <h3>Consagração e Camisa 19</h3>
+                    <p>Assumiu a titularidade absoluta e a mística camisa 19 do Barça, quebrando novos recordes de assistências e gols na Champions League.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <h2>Galeria de Momentos</h2>
+        
         <div class="filter-buttons">
             <button class="btn-filter active" data-filter="all">Todas</button>
             <button class="btn-filter" data-filter="barca">FC Barcelona</button>
             <button class="btn-filter" data-filter="espanha">Seleção Espanhola</button>
-            <button class="btn-filter" data-filter="premios">Prêmios & Conquistas</button>
+            <button class="btn-filter" data-filter="premios">Títulos</button>
         </div>
 
         <div class="gallery-grid">
             <div class="gallery-item barca">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Lamine no Barça">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Magia no Barça">
                 <div class="overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Dribles no Barcelona</span>
+                    <span>La Masia ao Profissional</span>
                 </div>
             </div>
 
             <div class="gallery-item espanha">
-                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Lamine na Espanha">
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Eurocopa">
                 <div class="overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Eurocopa 2024</span>
+                    <span>Campeão da Euro 2024</span>
                 </div>
             </div>
 
             <div class="gallery-item premios">
-                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=800&q=80" alt="Troféu">
+                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=800&q=80" alt="Troféus">
                 <div class="overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Golden Boy & Recordes</span>
+                    <span>Melhor Jovem da Europa</span>
                 </div>
             </div>
 
@@ -59,23 +118,7 @@
                 <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Camp Nou">
                 <div class="overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Gols no Camp Nou</span>
-                </div>
-            </div>
-
-            <div class="gallery-item espanha">
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Seleção">
-                <div class="overlay">
-                    <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Camisa 19 da Espanha</span>
-                </div>
-            </div>
-
-            <div class="gallery-item premios">
-                <img src="https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&w=800&q=80" alt="Comemoração">
-                <div class="overlay">
-                    <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>Comemoração 304</span>
+                    <span>Ponta Direita Titular</span>
                 </div>
             </div>
         </div>
@@ -83,12 +126,12 @@
 
     <div class="lightbox" id="lightbox">
         <span class="close-btn" id="close-btn">&times;</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagem ampliada">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Ampliada">
         <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Fan Site Lamine Yamal | Fotos & Galeria Interativa</p>
+        <p>&copy; 2026 Fan Site Lamine Yamal | História & Galeria</p>
     </footer>
 
     <script src="script.js"></script>

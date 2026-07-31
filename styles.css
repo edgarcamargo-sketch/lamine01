@@ -1,13 +1,23 @@
+:root {
+    --primary-blue: #004d98;
+    --accent-red: #a50044;
+    --gold: #ffcc00;
+    --bg-dark: #0f1015;
+    --card-dark: #161822;
+    --text-color: #e1e1e6;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #0f1015;
-    color: #fff;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -16,81 +26,194 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: #161822;
+    background: rgba(22, 24, 34, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .logo span {
-    color: #a50044;
+    color: var(--accent-red);
 }
 
-nav a {
+.nav-links a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
 }
 
 /* Hero */
 .hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(15,16,21,1)), 
+                url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(180deg, #161822 0%, #0f1015 100%);
+    padding-top: 60px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #004d98;
-    margin-bottom: 10px;
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
-/* Filtros */
-.container {
+.hero-content p {
+    font-size: 1.2rem;
+    color: #a8a8b3;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--primary-blue), var(--accent-red));
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Seções */
+.section {
+    padding: 90px 20px 50px;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
 }
 
+.section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--gold);
+}
+
+/* História */
+.bio-container {
+    background: var(--card-dark);
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent-red);
+    line-height: 1.8;
+}
+
+.bio-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Timeline (Linha do Tempo) */
+.bg-dark {
+    max-width: 100%;
+    background: #12131a;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--primary-blue);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: var(--accent-red);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--card-dark);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timeline-content .date {
+    font-size: 0.9rem;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    margin: 5px 0 10px;
+}
+
+/* Galeria & Filtros */
 .filter-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
 .btn-filter {
-    background: #1f2231;
+    background: var(--card-dark);
     color: #fff;
-    border: 2px solid transparent;
-    padding: 10px 22px;
-    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.btn-filter:hover, .btn-filter.active {
-    background: #a50044;
-    border-color: #ffcc00;
+.btn-filter.active, .btn-filter:hover {
+    background: var(--accent-red);
+    color: #fff;
 }
 
-/* Grade de Fotos */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
 }
 
 .gallery-item {
     position: relative;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    height: 250px;
+    height: 220px;
     cursor: pointer;
 }
 
@@ -98,7 +221,7 @@ nav a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s;
 }
 
 .gallery-item:hover img {
@@ -108,13 +231,13 @@ nav a {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 77, 152, 0.75);
+    background: rgba(0, 77, 152, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s;
 }
 
 .gallery-item:hover .overlay {
@@ -123,15 +246,15 @@ nav a {
 
 .overlay i {
     font-size: 2rem;
-    margin-bottom: 10px;
-    color: #ffcc00;
+    color: var(--gold);
+    margin-bottom: 8px;
 }
 
-/* Lightbox (Pop-up) */
+/* Lightbox Modal */
 .lightbox {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0,0,0,0.9);
     display: none;
     justify-content: center;
     align-items: center;
@@ -142,29 +265,28 @@ nav a {
 .lightbox-img {
     max-width: 85%;
     max-height: 75vh;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .lightbox-caption {
     margin-top: 15px;
+    color: var(--gold);
     font-size: 1.2rem;
-    color: #ffcc00;
 }
 
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 35px;
-    color: #fff;
+    right: 30px;
     font-size: 40px;
+    color: #fff;
     cursor: pointer;
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    background: #161822;
-    color: #888;
+    padding: 25px;
+    background: var(--card-dark);
+    color: #777;
+    margin-top: 40px;
 }

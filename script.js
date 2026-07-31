@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Lógica do Filtro de Categorias
+    // 1. Filtro da Galeria
     const filterButtons = document.querySelectorAll('.btn-filter');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove a classe 'active' de todos os botões e adiciona no clicado
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 2. Lógica do Modal (Lightbox) ao clicar na foto
+    // 2. Modal Lightbox de Imagens
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Fechar Modal no X ou clicando fora da imagem
     closeBtn.addEventListener('click', () => {
         lightbox.style.display = 'none';
     });
