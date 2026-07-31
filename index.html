@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamine Yamal | Galeria Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">LY<span>30</span></div>
+        <nav>
+            <a href="#galeria">Galeria</a>
+            <a href="#momentos">Momentos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Lamine Yamal</h1>
+        <p>Clique nas categorias abaixo para filtrar as fotos do craque!</p>
+    </section>
+
+    <section id="galeria" class="container">
+        <div class="filter-buttons">
+            <button class="btn-filter active" data-filter="all">Todas</button>
+            <button class="btn-filter" data-filter="barca">FC Barcelona</button>
+            <button class="btn-filter" data-filter="espanha">Seleção Espanhola</button>
+            <button class="btn-filter" data-filter="premios">Prêmios & Conquistas</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item barca">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Lamine no Barça">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Dribles no Barcelona</span>
+                </div>
+            </div>
+
+            <div class="gallery-item espanha">
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80" alt="Lamine na Espanha">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Eurocopa 2024</span>
+                </div>
+            </div>
+
+            <div class="gallery-item premios">
+                <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=800&q=80" alt="Troféu">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Golden Boy & Recordes</span>
+                </div>
+            </div>
+
+            <div class="gallery-item barca">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Camp Nou">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Gols no Camp Nou</span>
+                </div>
+            </div>
+
+            <div class="gallery-item espanha">
+                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Seleção">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Camisa 19 da Espanha</span>
+                </div>
+            </div>
+
+            <div class="gallery-item premios">
+                <img src="https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&w=800&q=80" alt="Comemoração">
+                <div class="overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>Comemoração 304</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagem ampliada">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Fan Site Lamine Yamal | Fotos & Galeria Interativa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
